@@ -7,42 +7,39 @@ body {
 }
 
 .container {
-    max-width: 1470px;
+    display: flex;
+    width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 }
 
 .header-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
     display: flex;
     border-bottom: 1px solid #E7E9FC;
-    padding-top: 24px;
-    padding-bottom: 23px;
+}
 
+.header-nav,
+.page-nav,
+.list-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    .logo-head,
-    .page-nav,
-    .list-cont {
-        display: flex;
-        flex-wrap: wrap;
-    }
+.header-nav {
+    display: flex;
+    gap: 76px;
+    align-items: center;
+}
 
-    .logo-head {
-        display: flex;
-        gap: 76px;
-        margin-left: 156px;
-        align-items: center;
-    }
-
-    .page-nav,
-    .list-cont {
-        align-items: center;
-        gap: 40px;
-    }
-
-    .list-cont {
-        margin-left: 332px;
-    }
+.page-nav,
+.list-cont {
+    gap: 40px;
 }
 
 .accent-text-logo {
@@ -77,6 +74,11 @@ body {
     color: #404bbf;
 }
 
+.link {
+    margin-top: 24px;
+    margin-bottom: 23px;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -98,7 +100,6 @@ img {
     display: block;
 }
 
-
 .list-cont .link-cont {
     text-decoration: none;
     list-style: none;
@@ -109,8 +110,9 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-
-
+    margin-top: 24px;
+    margin-bottom: 23px;
+    display: block;
 }
 
 .link-cont:hover,
@@ -123,33 +125,32 @@ img {
     background-color: #2E2F42;
     height: 600px;
     text-align: center;
+}
 
-    .text-hero-btn {
-        padding-top: 188px;
-        padding-bottom: 188px;;
-        margin: 0 auto;
-    }
+.text-hero-btn {
+    padding-top: 188px;
+    padding-bottom: 188px;;
+    margin: 0 auto;
+}
 
-    .cta-btn {
-        color: #FFFFFF;
-        background-color: #4D5AE5;
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        margin: 0 auto;
-        border-radius: 4px;
-        padding: 16px 0;
-        min-width: 169px;
-        height: 56px;
+.cta-btn {
+    color: #FFFFFF;
+    background-color: #4D5AE5;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 16px 0;
+    min-width: 169px;
+    height: 56px;
+}
 
-    }
-
-    .cta-btn:hover,
-    .cta-btn:focus {
-        background-color: #404BBF;
-    }
+.cta-btn:hover,
+.cta-btn:focus {
+    background-color: #404BBF;
 }
 
 h1 {
@@ -163,67 +164,78 @@ h1 {
     margin: 0 auto 48px;
 }
 
-.section-features {
+.section-features {}
 
-    .text-features-h2 {
-        /*display: none;*/
-    }
+.feature-container {
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+}
 
-    .text-features {
-        text-align: left;
-    }
+.text-features {
+    text-align: left;
+}
 
-    .list-feature {
-        display: flex;
-        justify-content: center;
-        /*padding: 120px 0;*/
-        margin: 120px 156px;
+.list-feature {
+    display: flex;
+    justify-content: center;
+    padding: 120px 0;
+    margin: 0 auto;
+}
 
+.card-text {
+    display: block;
+    margin-right: 24px;
+    width: calc(100% - (24px * 3) / 1);
+}
 
-        .card-text {
-            display: block;
-            margin-right: 24px;
-            width: calc(100% - (24px * 3) / 1);
-        }
-
-        .card-text:last-child {
-            margin-right: 0;
-        }
-    }
+.card-text:last-child {
+    margin-right: 0;
 }
 
 .section-team {
     background-color: #F4F4FD;
-    padding-top: 120px;
-
-    .text-team-h3,
-    .text-team {
-        text-align: center;
-    }
-
-    .list-team {
-        display: flex;
-        justify-content: center;
-        padding: 72px 0 120px 0;
-
-        .card-team {
-            background-color: #FFFFFF;
-            display: block;
-            max-width: 264px;
-            margin-right: 24px;
-        }
-
-        .card-team:last-child {
-            margin-right: 0;
-        }
-
-        .team-info {
-            padding: 32px 0;
-        }
-    }
 }
 
-.text-features-h2,
+.team-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.text-team-h2 {
+    display: block;
+    text-align: center;
+    /*margin: 120px auto;*/
+    /*padding: 156px;*/
+
+}
+
+.text-team-h3,
+.text-team {
+    text-align: center;
+}
+
+.list-team {
+    display: flex;
+    justify-content: center;
+    padding: 72px 0 120px 0;
+}
+
+.card-team {
+    background-color: #FFFFFF;
+    display: block;
+    max-width: 264px;
+    margin-right: 24px;
+}
+
+.card-team:last-child {
+    margin-right: 0;
+}
+
+.team-info {
+    padding: 32px 0;
+}
+
 .text-team-h2,
 .text-portfolio-h2 {
     font-family: Roboto, sans-serif;
@@ -265,57 +277,58 @@ h1 {
 
 .section-portfolio {
     padding-top: 120px;
+}
 
-    .text-portfolio {
-        text-align: left;
-    }
+.portfolio-container {
+    flex-direction: column;
+}
 
-    .portfolio-block {}
+.text-portfolio {
+    text-align: left;
+}
 
-    .list-portfolio {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: calc(100% - (24px * 4) / 3);
-        gap: 48px 24px;
-        padding-top: 72px;
-        padding-bottom: 120px;
-        margin: 0 auto;
+.list-portfolio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+    padding-top: 72px;
+    padding-bottom: 120px;
+    margin: 0 auto;
+}
 
-        .card-portfolio {
-            display: block;
-            width: 360px;
-        }
+.card-portfolio {
+    display: block;
+    width: 360px;
+}
 
-        .portfolio-info {
-            padding: 32px 15px;
-            border: 1px solid #E7E9FC;
-        }
-    }
+.portfolio-info {
+    padding: 32px 15px;
+    border: 1px solid #E7E9FC;
 }
 
 footer {
     background-color: #2E2F42;
     color: #F4F4FD;
     display: flex;
+}
 
-    .logo {
-        color: #F4F4FD;
-    }
+.logo-footer {
+    color: #F4F4FD;
+}
 
-    .text-footer {
-        font-family: Roboto, sans-serif;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-    }
+.text-footer {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 
-    .footer-info {
-        display: block;
-        width: 264px;
-        margin: 100px 0 100px 156px;
-    }
+.footer-info {
+    display: block;
+    width: 264px;
+    margin: 100px 0 100px 156px;
 }
 
 .visually-hidden {
