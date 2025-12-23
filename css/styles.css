@@ -127,13 +127,11 @@ img {
 .section-hero {
     color: #FFFFFF;
     background-color: #2E2F42;
-    height: 600px;
     text-align: center;
+    padding: 188px 0;
 }
 
 .text-hero-btn {
-    padding-top: 188px;
-    padding-bottom: 188px;;
     margin: 0 auto;
 }
 
@@ -145,11 +143,11 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    margin: 0 auto;
     border-radius: 4px;
-    padding: 16px 0;
     min-width: 169px;
     height: 56px;
+    border: none;
+    padding: 16px 32px;
 }
 
 .cta-btn:hover,
@@ -164,7 +162,7 @@ h1 {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-    width: 496px;
+    max-width: 496px;
     margin: 0 auto 48px;
 }
 
@@ -321,13 +319,11 @@ h1 {
 footer {
     background-color: #2E2F42;
     color: #F4F4FD;
-    display: flex;
     padding: 100px 0;
 }
 
-.footer-container {
-    margin-left: 156px;
-}
+.footer-container {}
+
 
 .logo-footer {
     color: #F4F4FD;
